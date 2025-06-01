@@ -18,7 +18,7 @@ class Listing(models.Model):
 class Booking(models.Model):
     booking_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name='bookings')
-    user = models.CharField(max_length=255)  # Placeholder for user model
+    user = models.CharField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -30,7 +30,7 @@ class Booking(models.Model):
 class Review(models.Model):
     review_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name='reviews')
-    user = models.CharField(max_length=255)  # Placeholder for user model
+    user = models.CharField(max_length=255)
     rating = models.PositiveIntegerField(choices=[(i, str(i)) for i in range(1, 6)], default=5)
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

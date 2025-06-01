@@ -1,19 +1,19 @@
-# listings
+# Listings App
 
-This directory contains the core app for managing travel listings, bookings, and reviews.
+This directory hosts the core application responsible for managing travel property listings, bookings, and user reviews.
 
-## Structure
+## Directory Overview
 
-- `models.py` — Defines the database models: Listing, Booking, and Review.
-- `serializers.py` — Contains serializers for API data representation.
-- `management/commands/` — Custom management commands (e.g., database seeders).
-- `views.py` — (To be implemented) API views for handling requests.
+- `models.py` — Defines the database models including Listing, Booking, and Review.
+- `serializers.py` — Contains serializers to convert model instances to JSON and vice versa for API communication.
+- `management/commands/` — Houses custom Django management commands, such as database seeders.
+- `views.py` — (Planned) API views to handle client requests and responses.
 
-## Purpose
+## Functionality
 
-The `listings` app is responsible for:
-- Storing and managing travel property listings.
-- Handling bookings and user reviews.
-- Providing API endpoints for frontend and third-party integrations.
+The `listings` app provides the following key features:
 
----
+- Maintaining records of travel listings and their details.
+- Managing bookings made by users.
+- Collecting and displaying user reviews.
+- Exposing RESTful API endpoints for frontend clients and third-party services.
